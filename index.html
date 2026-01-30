@@ -1,35 +1,126 @@
-<!doctype html>
-<html lang="id">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Template Awal</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EasyMath | Free Online Math Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--body-->
-	<body>
-        <!--header-->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang</a></li>
-                    <li><a href="#">Kontak</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--bmain-->
-		<main id="app">
-			<h1>Halo, dunia!</h1>
-			<p>Template awal untuk proyek.</p>
-		</main>
-        <!--footer-->
-        <footer>
-            <p>&copy; 2024 Perusahaan Saya</p>
-        </footer>
-		<script src="js/script.js" defer></script>
-	</body>
-    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans">
+
+<!-- NAVBAR -->
+<header class="border-b">
+    <div class="flex items-center justify-between px-6 py-4">
+
+        <!-- LOGO -->
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 overflow-hidden">
+                <img src="assets\logo.png" alt="EasyMath Logo"
+                     class="w-full h-full object-cover">
+            </div>
+            <span class="font-bold text-lg">EasyMath</span>
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden md:flex gap-4">
+            <a href="#home" class="border px-3 py-1">Home</a>
+            <a href="#profile" class="border px-3 py-1">Our Profile</a>
+            <a href="#portfolio" class="border px-3 py-1">Portofolio</a>
+            <a href="#message" class="border px-3 py-1">Message Us</a>
+        </nav>
+
+        <!-- HAMBURGER BUTTON -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+            ☰
+        </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden flex-col border-t md:hidden">
+        <a href="#home" class="px-6 py-2 border-b">Home</a>
+        <a href="#profile" class="px-6 py-2 border-b">Our Profile</a>
+        <a href="#portfolio" class="px-6 py-2 border-b">Collections</a>
+        <a href="#message" class="px-6 py-2">Message Us</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="px-6 py-10">
+    <h1 id="welcomeText" class="text-3xl font-bold mb-2"></h1>
+    <p class="text-gray-600">
+        Free online library of mathematics books for everyone
+    </p>
+</section>
+
+<hr>
+
+<!-- PROFILE -->
+<section id="profile">
+    <div class="bg-gray-100 py-10 text-center">
+        <h2 class="text-2xl font-bold">About EasyMath</h2>
+    </div>
+
+    <div class="px-6 py-6 space-y-4 max-w-3xl">
+        <p>
+            <b>EasyMath</b> is an educational platform providing a free online
+            mathematics book library for students, educators, and self-learners.
+        </p>
+
+        <div>
+            <h3 class="font-semibold">Vision</h3>
+            <p>
+                To become the most accessible free mathematics library worldwide.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="font-semibold">Mission</h3>
+            <ul class="list-disc pl-6">
+                <li>Provide free math book access</li>
+                <li>Support mathematics education</li>
+                <li>Encourage lifelong learning</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- MESSAGE US -->
+<section id="message" class="px-6 py-10">
+    <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+
+    <div class="flex flex-col md:flex-row gap-6">
+        <!-- FORM -->
+        <form id="contactForm" class="w-full md:w-1/2 space-y-3">
+            <input id="name" type="text" placeholder="Name" class="border w-full p-2">
+            <input id="email" type="email" placeholder="Email" class="border w-full p-2">
+            <input id="phone" type="tel" placeholder="Phone Number" class="border w-full p-2">
+            <textarea id="messageText" placeholder="Message"
+                      class="border w-full p-2"></textarea>
+            <button class="border px-4 py-2 w-full">Submit</button>
+        </form>
+
+        <!-- OUTPUT -->
+        <div id="output" class="border p-4 w-full md:w-1/2 text-sm">
+            <p><b>Current time:</b> -</p>
+            <p><b>Name:</b> -</p>
+            <p><b>Email:</b> -</p>
+            <p><b>Phone:</b> -</p>
+            <p><b>Message:</b> -</p>
+        </div>
+    </div>
+</section>
+
+<footer class="text-right px-6 py-4 text-sm">
+    © 2026 EasyMath
+</footer>
+
+<script src="js/script.js"></script>
+</body>
 </html>
-

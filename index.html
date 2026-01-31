@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EasyMath | Free Online Math Library</title>
+    <title>EasyMath | Free Online Math Library (Mini Project RevoU)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Tailwind CDN -->
@@ -14,12 +14,12 @@
 <body class="font-sans">
 
 <!-- NAVBAR -->
-<header class="border-b">
+<header class="sticky top-0 z-50 border-b bg-white">
     <div class="flex items-center justify-between px-6 py-4">
 
         <!-- LOGO -->
         <div class="flex items-center gap-2">
-            <div class="w-10 h-10 overflow-hidden">
+            <div class="w-12 h-12 overflow-hidden">
                 <img src="assets\logo.png" alt="EasyMath Logo"
                      class="w-full h-full object-cover">
             </div>
@@ -30,7 +30,8 @@
         <nav class="hidden md:flex gap-4">
             <a href="#home" class="border px-3 py-1">Home</a>
             <a href="#profile" class="border px-3 py-1">Our Profile</a>
-            <a href="#portfolio" class="border px-3 py-1">Portofolio</a>
+            <a href="#" id="websiteLink" class="border px-3 py-1">Website</a>
+
             <a href="#message" class="border px-3 py-1">Message Us</a>
         </nav>
 
@@ -40,22 +41,33 @@
         </button>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="hidden flex-col border-t md:hidden">
-        <a href="#home" class="px-6 py-2 border-b">Home</a>
-        <a href="#profile" class="px-6 py-2 border-b">Our Profile</a>
-        <a href="#portfolio" class="px-6 py-2 border-b">Collections</a>
-        <a href="#message" class="px-6 py-2">Message Us</a>
-    </div>
+   <!-- MOBILE MENU -->
+<div id="mobileMenu" class="hidden flex flex-col border-t md:hidden">
+    <a href="#home" class="px-6 py-2 border-b">Home</a>
+    <a href="#profile" class="px-6 py-2 border-b">Our Profile</a>
+    <a href="#portfolio" class="px-6 py-2 border-b">Collections</a>
+    <a href="#message" class="px-6 py-2">Message Us</a>
+</div>
+
 </header>
 
 <!-- HERO -->
-<section id="home" class="px-6 py-10">
-    <h1 id="welcomeText" class="text-3xl font-bold mb-2"></h1>
-    <p class="text-gray-600">
-        Free online library of mathematics books for everyone
-    </p>
+<section id="home"
+    class="relative h-[578px] bg-cover bg-center flex items-center"
+    style="background-image: url('assets/hero.jpg');">
+
+    <!-- Overlay gelap (biar teks kebaca) -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 px-6 max-w-4xl text-white">
+        <h1 id="welcomeText" class="text-4xl md:text-5xl font-bold mb-3"></h1>
+        <p class="text-lg md:text-xl">
+            Free online library of mathematics books for everyone
+        </p>
+    </div>
 </section>
+
 
 <hr>
 
@@ -65,6 +77,35 @@
         <h2 class="text-2xl font-bold">About EasyMath</h2>
     </div>
 
+   <!-- OUR HEADQUARTER -->
+    <div class="py-10 px-6">
+        <h3 class="font-semibold mb-6">Our Headquarter</h3>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+
+            <!-- Semarang -->
+            <div class="flex flex-col items-center">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400">
+                    <img src="assets/semarang.jpg"
+                        alt="Semarang Office"
+                        class="w-full h-full object-cover">
+                </div>
+                <p class="mt-3">Semarang</p>
+            </div>
+
+            <!-- Pemalang -->
+            <div class="flex flex-col items-center">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400">
+                    <img src="assets/pemalang.jpg"
+                        alt="Pemalang Office"
+                        class="w-full h-full object-cover">
+                </div>
+                <p class="mt-3">Pemalang</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VISION & MISSION -->
     <div class="px-6 py-6 space-y-4 max-w-3xl">
         <p>
             <b>EasyMath</b> is an educational platform providing a free online
@@ -103,7 +144,11 @@
             <input id="phone" type="tel" placeholder="Phone Number" class="border w-full p-2">
             <textarea id="messageText" placeholder="Message"
                       class="border w-full p-2"></textarea>
-            <button class="border px-4 py-2 w-full">Submit</button>
+            <button class="bg-blue-600 text-white px-4 py-2 w-full rounded hover:bg-blue-700 transition shadow-md hover:shadow-lg
+                        active:scale-95">
+                    Submit
+                </button>
+
         </form>
 
         <!-- OUTPUT -->
@@ -118,7 +163,7 @@
 </section>
 
 <footer class="text-right px-6 py-4 text-sm">
-    © 2026 EasyMath
+    © 2026 EasyMath -S.H.
 </footer>
 
 <script src="js/script.js"></script>

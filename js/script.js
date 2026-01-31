@@ -6,20 +6,25 @@ menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
 
+
 // Website Link Confirmation
-const websiteLink = document.getElementById("websiteLink");
+document.querySelectorAll(".website-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
 
-websiteLink.addEventListener("click", function (e) {
-    e.preventDefault();
+        const confirmMove = confirm(
+            "Anda akan berpindah ke website perpustakaan EasyMath.\nApakah Anda ingin melanjutkan?"
+        );
 
-    const confirmMove = confirm(
-        "Anda akan berpindah ke website perpustakaan EasyMath.\nApakah Anda ingin melanjutkan?"
-    );
-
-    if (confirmMove) {
-        window.location.href = "https://sidhik-hidayatullah.github.io/EasyMath/";
-    }
+        if (confirmMove) {
+            window.open(
+                "https://sidhik-hidayatullah.github.io/EasyMath/",
+                "_blank"
+            );
+        }
+    });
 });
+
 
 // Welcome Message
 const userName = prompt("Welcome to EasyMath! Please enter your name:");
